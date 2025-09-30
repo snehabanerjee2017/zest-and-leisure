@@ -2,17 +2,22 @@ import React from 'react';
 import { View } from 'react-native';
 import styles from '../styles/homeScreenStyles';
 import CustomButton from './CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
-const ButtonSection = () => (
-    <View style={styles.buttonContainer}>
-        <View style={styles.buttonRow}>
-            <CustomButton title="Cakes" />
-            <CustomButton title="Cupcakes" />
-            <CustomButton title="Speciality Flavours" />
-            <CustomButton title="Tea Cakes" />
-            <CustomButton title="Cake Shots" />
+const ButtonSection = () => {
+    const navigation = useNavigation();
+
+    return (
+        <View style={styles.buttonContainer}>
+            <View style={styles.buttonRow}>
+                <CustomButton title="Cakes" onPress={() => navigation.navigate('Cakes')} />
+                <CustomButton title="Cupcakes" onPress={() => navigation.navigate('Cupcakes')}/>
+                <CustomButton title="Speciality Flavours" onPress={() => navigation.navigate('SpecialityFlavours')}/>
+                <CustomButton title="Tea Cakes" onPress={() => navigation.navigate('TeaCakes')}/>
+                <CustomButton title="Cake Shots" onPress={() => navigation.navigate('CakeShots')}/>
+            </View>
         </View>
-    </View>
-);
+    );
+};
 
 export default ButtonSection;

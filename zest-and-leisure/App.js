@@ -1,9 +1,27 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { View} from 'react-native';
-import HomeScreen from './app/screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import HomeScreen from './app/screens/HomeScreen';
+import Cakes from './app/screens/Cakes';
+import Cupcakes from './app/screens/Cupcakes';
+import SpecialityFlavours from './app/screens/SpecialityFlavours';
+import TeaCakes from './app/screens/TeaCakes';
+import CakeShots from './app/screens/CakeShots';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <HomeScreen/>;
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false,}}>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Cakes" component={Cakes} />
+                <Stack.Screen name="Cupcakes" component={Cupcakes} />
+                <Stack.Screen name="SpecialityFlavours" component={SpecialityFlavours} />
+                <Stack.Screen name="TeaCakes" component={TeaCakes} />
+                <Stack.Screen name="CakeShots" component={CakeShots} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
