@@ -8,12 +8,12 @@ import ButtonSection from '../components/ButtonSection';
 import AboutSection from '../components/AboutSection';
 import BottomSection from '../components/BottomSection';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return (
         <SafeAreaProvider>
             <SafeAreaView style={styles.container} edges={["top"]}>
                 <ScrollView contentContainerStyle={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-                    <Header />
+                    <Header navigation={navigation}/>
                     <ButtonSection />
                     <AboutSection />
                     <BottomSection />
