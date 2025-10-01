@@ -1,13 +1,15 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import styles from '../styles/homeScreenStyles';
 
-const Header = () => (
+const Header = ({navigation}) => (
     <View style={styles.headerContainer}>
-        <Image
-            style={styles.headerLogo}
-            source={require('../assets/background.png')}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <Image
+                style={styles.headerLogo}
+                source={require('../assets/background.png')}
+            />
+        </TouchableOpacity>
     </View>
 );
 

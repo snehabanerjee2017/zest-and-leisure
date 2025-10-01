@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Platform, TouchableOpacity, Image, Dimensions, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Platform, TouchableOpacity, Image, Dimensions, ScrollView} from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
+
 import styles from '../styles/homeScreenStyles';
 import itemStyles from '../styles/itemStyles';
 
@@ -23,7 +24,7 @@ const posts = [
   { id: '10', url: "https://www.instagram.com/reel/DNnweUhxePV/", thumbnail: require('../assets/DNnweUhxePV.png') },
 ];
 
-const Cakes = () => {
+const Cakes = ({navigation}) => {
   const [playVideo, setPlayVideo] = useState(null);
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const Cakes = () => {
       <SafeAreaView style={styles.container} edges={["top"]}>
         <ScrollView contentContainerStyle={itemStyles.scrollView} showsVerticalScrollIndicator={false}>
           {/* Header */}
-          <Header />
+          <Header navigation={navigation} />
 
           {/* Title Section */}
           <View style={itemStyles.container}>
