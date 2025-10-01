@@ -5,12 +5,12 @@ import Header from '../components/Header';
 import styles from '../styles/homeScreenStyles';
 import itemStyles from '../styles/itemStyles';
 
-const Cupcakes = () => {
+const Cupcakes = ({navigation}) => {
     return (
         <SafeAreaProvider>
             <SafeAreaView style={styles.container} edges={["top"]}>
                 <ScrollView contentContainerStyle={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-                    <Header />
+                    <Header navigation={navigation}/>
                     <View style={itemStyles.container}>
                         <Text style={itemStyles.title}>🎂 Cupcakes
                          Page</Text>
