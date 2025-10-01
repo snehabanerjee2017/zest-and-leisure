@@ -1,26 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../components/Header';
-import styles from '../styles/homeScreenStyles';
-import itemStyles from '../styles/itemStyles';
+import { View, Text, StyleSheet } from 'react-native';
 
 const TeaCakes = () => {
     return (
-        <SafeAreaProvider>
-            <SafeAreaView style={styles.container} edges={["top"]}>
-                <ScrollView contentContainerStyle={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-                    <Header />
-                    <View style={itemStyles.container}>
-                        <Text style={itemStyles.title}>🎂 Tea Cakes
-                         Page</Text>
-                        <Text>Here you'll see all our delicious tea cakes!</Text>
-                    </View>
-                </ScrollView>
-            </SafeAreaView>
-        </SafeAreaProvider>
+        <View style={styles.container}>
+            <Text style={styles.title}>🎂 Tea Cakes Page</Text>
+            <Text>Here you'll see all our delicious Tea Cakes!</Text>
+        </View>
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 10,
+    },
+});
 
 export default TeaCakes;
