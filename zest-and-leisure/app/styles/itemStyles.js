@@ -80,7 +80,11 @@ export default StyleSheet.create({
         marginBottom: 8,
         color: "#9d174d",
     },
-    itemText: { fontSize: 14, marginBottom: 4, color: "#444" },
+    itemText: { 
+        fontSize: 14, 
+        marginBottom: 4, 
+        color: "#444" 
+    },
     table: {
         backgroundColor: "#fff",
         padding: 12,
@@ -95,13 +99,28 @@ export default StyleSheet.create({
         paddingBottom: 6,
         marginBottom: 6,
     },
-    cellHeader: { flex: 1, fontWeight: "600", color: "#333" },
-    tableRow: { flexDirection: "row", marginBottom: 4 },
-    cell: { flex: 1, color: "#444" },
-    note: { marginTop: 6, fontSize: 12, textAlign: "center", color: "#666" },
+    cellHeader: { 
+        flex: 1, 
+        fontWeight: "600", 
+        color: "#333" 
+},
+    tableRow: { 
+        flexDirection: "row", 
+        marginBottom: 4 
+    },
+    cell: { 
+        flex: 1, 
+        color: "#444" 
+    },
+    note: { 
+        marginTop: 6, 
+        fontSize: 12, 
+        textAlign: "center", 
+        color: "#666" 
+    },
     contactLink: {
         color: "#d6336c",
         fontWeight: "bold",
         textDecorationLine: "underline",
-        },
+    },
 })
