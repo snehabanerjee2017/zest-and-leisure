@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Image, Text, useWindowDimensions } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import styles from '../styles/homeScreenStyles';
 import CustomButton from './CustomButton';
 
@@ -8,10 +10,13 @@ const AboutSection = () => {
     const isDesktop = width >= 768;
 
     return (
-        <View style={[
-            styles.aboutSection,
-            { flexDirection: isDesktop ? 'row' : 'column' }
-        ]}>
+        <LinearGradient
+            colors={['#CBC3E3', '#E6E6FA']}
+            style={[
+                styles.aboutSection,
+                { flexDirection: isDesktop ? 'row' : 'column' }
+            ]}
+        >
             <Image
                 source={require('../assets/family_pic.png')}
                 style={[
@@ -33,7 +38,7 @@ const AboutSection = () => {
                     <CustomButton title="Read More" />
                 </View>
             </View>
-        </View>
+        </LinearGradient>
     );
 };
 
