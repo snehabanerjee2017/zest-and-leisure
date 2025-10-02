@@ -8,6 +8,8 @@ import Cupcakes from './app/screens/Cupcakes';
 import SpecialityFlavours from './app/screens/SpecialityFlavours';
 import TeaCakes from './app/screens/TeaCakes';
 import CakeShots from './app/screens/CakeShots';
+import Order from './app/screens/Order';
+import Contact from './app/screens/Contact';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,9 @@ export default function App() {
                 <Stack.Screen name="SpecialityFlavours" component={SpecialityFlavours} />
                 <Stack.Screen name="TeaCakes" component={TeaCakes} />
                 <Stack.Screen name="CakeShots" component={CakeShots} />
+                <Stack.Screen name="Order" component={Order} />
+                <Stack.Screen name="Contact" component={Contact} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );

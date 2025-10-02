@@ -16,7 +16,7 @@ const ButtonSection = () => {
                 <CustomButton title="Tea Cakes" onPress={() => navigation.navigate('TeaCakes')}/>
                 <CustomButton title="Cake Shots" onPress={() => navigation.navigate('CakeShots')}/>
                 <CustomButton title="Order" onPress={() => navigation.navigate('Order')}/>
-                    <CustomButton title="Contact" onPress={() => navigation.navigate('Contact')}/>
+                <CustomButton title="Contact" onPress={() => navigation.navigate('Contact')}/>
             </View>
         </View>
     );
