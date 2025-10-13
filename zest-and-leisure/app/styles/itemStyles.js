@@ -13,7 +13,7 @@ export default StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         marginVertical: 10,
-        marginBottom: 10,
+        marginBottom: measurements.marginBottom,
         color: "#d6336c",
     },
     scrollView: {
@@ -65,7 +65,7 @@ export default StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        marginBottom: 20,
+        marginBottom: measurements.marginBottom,
     },
     card: {
         flex: 1,
@@ -79,12 +79,12 @@ export default StyleSheet.create({
     cardTitle: {
         fontSize: 18,
         fontWeight: "600",
-        marginBottom: 8,
+        marginBottom: measurements.marginBottom,
         color: "#9d174d",
     },
     itemText: { 
         fontSize: 14, 
-        marginBottom: 4, 
+        marginBottom: measurements.marginBottom, 
         color: "#444" 
     },
     table: {
@@ -92,14 +92,14 @@ export default StyleSheet.create({
         padding: 12,
         borderRadius: measurements.borderRadius,
         elevation: 1,
-        marginBottom: 20,
+        marginBottom: measurements.marginBottom,
     },
     tableHeader: {
         flexDirection: "row",
         borderBottomWidth: 1,
         borderColor: "#ddd",
         paddingBottom: 6,
-        marginBottom: 6,
+        marginBottom: measurements.marginBottom,
     },
     cellHeader: { 
         flex: 1, 
@@ -108,7 +108,7 @@ export default StyleSheet.create({
 },
     tableRow: { 
         flexDirection: "row", 
-        marginBottom: 4 
+        marginBottom: measurements.marginBottom, 
     },
     cell: { 
         flex: 1, 

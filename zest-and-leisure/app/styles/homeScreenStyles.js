@@ -19,8 +19,8 @@ export default StyleSheet.create({
         paddingVertical: 20,
     },
     headerLogo: {
-        width: 300,
-        height: 300,
+        width: measurements.logoWidth,
+        height: measurements.logoHeight,
     },
     buttonContainer: {
         justifyContent: "center",
@@ -50,13 +50,12 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         borderRadius: measurements.borderRadius, 
-        marginBottom:10,
+        marginBottom: measurements.marginBottom,
     },
 
     aboutImage: {
-        marginBottom: 10,
-        width: 250,
-        height: 250,
+        width: measurements.imageWidth,
+        height: measurements.imageHeight,
         borderRadius: measurements.borderRadius,
     },
     mobileImage: {
@@ -79,7 +78,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 20,
         borderRadius: measurements.borderRadius,
-        marginBottom:10,
+        marginBottom: measurements.marginBottom,
     },
     textContainer: {
         flex: 1,

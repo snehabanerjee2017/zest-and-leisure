@@ -3,12 +3,13 @@ import { View, Image, Text, useWindowDimensions,} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import colors from '../config/colors';
+import measurements from '../config/measurements';
 import styles from '../styles/homeScreenStyles';
 import CustomButton from './CustomButton';
 
 const AboutSection = () => {
     const { width } = useWindowDimensions();
-    const isDesktop = width >= 768;
+    const isDesktop = width >= measurements.mobileWidthThreshold;
     const navigation = useNavigation(); 
 
     return (

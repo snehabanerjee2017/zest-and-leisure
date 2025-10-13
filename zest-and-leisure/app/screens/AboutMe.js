@@ -6,10 +6,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Header from '../components/Header';
 import styles from '../styles/homeScreenStyles';
 import colors from '../config/colors';
+import measurements from '../config/measurements';
 
 function AboutMe({ navigation }) {
     const { width } = useWindowDimensions();
-    const isDesktop = width >= 768;
+    const isDesktop = width >= measurements.mobileWidthThreshold;
 
     const aboutSections = [
         {
