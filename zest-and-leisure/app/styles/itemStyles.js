@@ -1,33 +1,28 @@
 import { StyleSheet } from 'react-native';
 
 import measurements from '../config/measurements';
+import colors from '../config/colors';
 
 export default StyleSheet.create({
     container: {
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: measurements.borderRadius, 
+        marginBottom: measurements.marginBottom,
     },
     title: {
-        fontSize: 26,
-        fontWeight: "bold",
-        textAlign: "center",
-        marginVertical: 10,
+        fontSize: 22,
+        fontWeight: "700",
         marginBottom: measurements.marginBottom,
-        color: "#d6336c",
+        color: colors.titleFont,
+        textAlign: "center",
     },
     grid: {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "space-between",
     },
-    gridTitle: {
-        fontSize: 22,
-        fontWeight: "700",
-        marginBottom: measurements.marginBottom,
-        color: "#000",
-        },
-
     item: {
         alignItems: "center",
         marginBottom: measurements.marginBottom,
@@ -49,6 +44,7 @@ export default StyleSheet.create({
         marginVertical: 10,
     },
     sectionContainer: {
+        width: "100%",
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "space-between",

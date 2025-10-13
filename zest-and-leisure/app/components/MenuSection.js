@@ -1,9 +1,16 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
+
+import colors from '../config/colors';
+import measurements from "../config/measurements";
 import itemStyles from "../styles/itemStyles";
 
 const MenuSection = ({ title, sections }) => (
-  <View style={itemStyles.textContainer}>
+  <LinearGradient
+      colors={[colors.gradientDark, colors.gradientLight]}
+      style={itemStyles.container}
+  >
     <Text style={itemStyles.title}>{title}</Text>
     <View style={itemStyles.sectionContainer}>
       {Object.entries(sections).map(([sectionTitle, items]) => (
@@ -17,7 +24,7 @@ const MenuSection = ({ title, sections }) => (
         </View>
       ))}
     </View>
-  </View>
+  </LinearGradient>
 );
 
 export default MenuSection;

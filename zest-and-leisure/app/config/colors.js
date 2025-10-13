@@ -1,5 +1,6 @@
 export default {
+    black: "#000",
     gradientDark: "#CBC3E3",
     gradientLight: "#E6E6FA",
-    black: "#000",
+    titleFont:"#702963",
 }

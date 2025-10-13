@@ -8,7 +8,9 @@ import {
   StyleSheet,
   useWindowDimensions,
 } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
 
+import colors from '../config/colors';
 import measurements from "../config/measurements";
 import itemStyles from "../styles/itemStyles";
 
@@ -16,19 +18,20 @@ const InstagramGrid = ({ posts, title }) => {
   const { width } = useWindowDimensions();
   const isDesktop = width >= measurements.mobileWidthThreshold;
 
-  // 2 items for mobile, 5 for desktop
   const numColumns = isDesktop ? 5 : 2;
   const itemSpacing = isDesktop ? 20 : 10;
   const containerPadding = isDesktop ? 10 : 5;
 
-  // Smaller thumbnails on mobile
   const scaleFactor = isDesktop ? 1 : 0.85;
   const itemWidth =
     ((width - containerPadding * 2 - itemSpacing * (numColumns - 1)) / numColumns) * scaleFactor;
 
   return (
-    <View style={itemStyles.container}>
-      {title && <Text style={itemStyles.gridTitle}>{title}</Text>}
+    <LinearGradient
+        colors={[colors.gradientDark, colors.gradientLight]}
+        style={itemStyles.container}
+    >
+      {title && <Text style={itemStyles.title}>{title}</Text>}
       <View style={[itemStyles.grid, { paddingHorizontal: containerPadding }]}>
         {posts.map((post) => (
           <TouchableOpacity
@@ -45,7 +48,7 @@ const InstagramGrid = ({ posts, title }) => {
           </TouchableOpacity>
         ))}
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
