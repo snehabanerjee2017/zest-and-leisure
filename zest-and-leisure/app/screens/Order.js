@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
 import Header from '../components/Header';
 import styles from '../styles/homeScreenStyles';
 import itemStyles from '../styles/itemStyles';
