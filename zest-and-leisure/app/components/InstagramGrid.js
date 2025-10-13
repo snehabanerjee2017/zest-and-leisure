@@ -1,63 +1,50 @@
-// components/InstagramGrid.js
-import React, { useEffect, useState } from "react";
-import { View, Text, Platform, TouchableOpacity, Image, Dimensions } from "react-native";
+import React from "react";
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  Linking,
+  StyleSheet,
+  useWindowDimensions,
+} from "react-native";
 
-let WebView;
-if (Platform.OS !== "web") {
-  WebView = require("react-native-webview").WebView;
-}
-
+import measurements from "../config/measurements";
 import itemStyles from "../styles/itemStyles";
 
 const InstagramGrid = ({ posts, title }) => {
-  const [playVideo, setPlayVideo] = useState(null);
+  const { width } = useWindowDimensions();
+  const isDesktop = width >= measurements.mobileWidthThreshold;
 
-  useEffect(() => {
-    if (Platform.OS === "web" && playVideo) {
-      if (!document.getElementById("instagram-embed-script")) {
-        const script = document.createElement("script");
-        script.id = "instagram-embed-script";
-        script.src = "https://www.instagram.com/embed.js";
-        script.async = true;
-        document.body.appendChild(script);
-      } else {
-        window.instgrm?.Embeds.process();
-      }
-    }
-  }, [playVideo]);
+  // 2 items for mobile, 5 for desktop
+  const numColumns = isDesktop ? 5 : 2;
+  const itemSpacing = isDesktop ? 20 : 10;
+  const containerPadding = isDesktop ? 10 : 5;
 
-  const numColumns = Platform.OS === "web" ? 5 : 2;
-  const screenWidth = Dimensions.get("window").width;
-  const itemSize = screenWidth / numColumns - numColumns * itemStyles.scrollView.padding;
-
-  const renderPost = (item) => (
-    <View key={item.id} style={[itemStyles.postContainer, { width: itemSize, height: itemSize }]}>
-      {playVideo === item.id ? (
-        Platform.OS === "web" ? (
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink={item.url}
-            data-instgrm-version="14"
-            style={itemStyles.blockquoteStyle}
-          />
-        ) : (
-          <WebView source={{ uri: item.url }} style={itemStyles.webView} javaScriptEnabled domStorageEnabled />
-        )
-      ) : (
-        <TouchableOpacity onPress={() => setPlayVideo(item.id)} style={itemStyles.touchable}>
-          <Image source={item.thumbnail} style={itemStyles.thumbnail} resizeMode="cover" />
-          <View style={itemStyles.playButton}>
-            <Text style={itemStyles.playIcon}>▶</Text>
-          </View>
-        </TouchableOpacity>
-      )}
-    </View>
-  );
+  // Smaller thumbnails on mobile
+  const scaleFactor = isDesktop ? 1 : 0.85;
+  const itemWidth =
+    ((width - containerPadding * 2 - itemSpacing * (numColumns - 1)) / numColumns) * scaleFactor;
 
   return (
     <View style={itemStyles.container}>
-      <Text style={itemStyles.title}>{title}</Text>
-      <View style={itemStyles.grid}>{posts.map(renderPost)}</View>
+      {title && <Text style={itemStyles.gridTitle}>{title}</Text>}
+      <View style={[itemStyles.grid, { paddingHorizontal: containerPadding }]}>
+        {posts.map((post) => (
+          <TouchableOpacity
+            key={post.id}
+            style={[itemStyles.item, { width: itemWidth }]}
+            onPress={() => Linking.openURL(post.url)}
+          >
+            <Image
+              source={post.thumbnail}
+              style={[itemStyles.thumbnail, { width: itemWidth, height: itemWidth }]}
+              resizeMode="cover"
+            />
+            <Text style={itemStyles.caption}>{post.title}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
     </View>
   );
 };

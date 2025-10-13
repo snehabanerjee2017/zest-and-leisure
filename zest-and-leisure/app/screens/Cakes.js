@@ -11,16 +11,16 @@ import styles from "../styles/homeScreenStyles";
 
 
 const posts = [
-  { id: "1", url: "https://www.instagram.com/reel/DPEdGEVDSJU/", thumbnail: require("../assets/DPEdGEVDSJU.png") },
-  { id: "2", url: "https://www.instagram.com/reel/DO8vcdUDUrI/", thumbnail: require("../assets/DO8vcdUDUrI.png") },
-  { id: "3", url: "https://www.instagram.com/reel/DOycYmiDY2_/", thumbnail: require("../assets/DOycYmiDY2_.png") },
-  { id: "4", url: "https://www.instagram.com/reel/DOq4H_fjR7X/", thumbnail: require("../assets/DOq4H_fjR7X.png") },
-  { id: "5", url: "https://www.instagram.com/reel/DOgZQblDRBV/", thumbnail: require("../assets/DOgZQblDRBV.png") },
-  { id: "6", url: "https://www.instagram.com/reel/DOL2M2fDQzI/", thumbnail: require("../assets/DOL2M2fDQzI.png") },
-  { id: "7", url: "https://www.instagram.com/reel/DOGryoRDYK6/", thumbnail: require("../assets/DOGryoRDYK6.png") },
-  { id: "8", url: "https://www.instagram.com/reel/DNyE0tkWtCw/", thumbnail: require("../assets/DNyE0tkWtCw.png") },
-  { id: "9", url: "https://www.instagram.com/reel/DNs9rLPWjsL/", thumbnail: require("../assets/DNs9rLPWjsL.png") },
-  { id: "10", url: "https://www.instagram.com/reel/DNnweUhxePV/", thumbnail: require("../assets/DNnweUhxePV.png") },
+  { id: "1", title: "Marble Cake with Oreo Filling",  url: "https://www.instagram.com/reel/DPEdGEVDSJU/", thumbnail: require("../assets/DPEdGEVDSJU.png") },
+  { id: "2", title: "Black Forest Cake", url: "https://www.instagram.com/reel/DO8vcdUDUrI/", thumbnail: require("../assets/DO8vcdUDUrI.png") },
+  { id: "3", title: "Chocolate Spiderman Cake", url: "https://www.instagram.com/reel/DOycYmiDY2_/", thumbnail: require("../assets/DOycYmiDY2_.png") },
+  { id: "4", title: "Jungle themed Eggless Rasamalai cake", url: "https://www.instagram.com/reel/DOq4H_fjR7X/", thumbnail: require("../assets/DOq4H_fjR7X.png") },
+  { id: "5", title: "Two-tier Eggless Vanilla Cake with a Strawberry Jam Filling", url: "https://www.instagram.com/reel/DOgZQblDRBV/", thumbnail: require("../assets/DOgZQblDRBV.png") },
+  { id: "6", title: "Eggless Oreo Lego Cake", url: "https://www.instagram.com/reel/DOL2M2fDQzI/", thumbnail: require("../assets/DOL2M2fDQzI.png") },
+  { id: "7", title: "Dinosaur Chocolate Cake with Chocolate Buttercream", url: "https://www.instagram.com/reel/DOGryoRDYK6/", thumbnail: require("../assets/DOGryoRDYK6.png") },
+  { id: "8", title: "Two-tier Eggless Mango Mastani-Rasamalai Cake", url: "https://www.instagram.com/reel/DNyE0tkWtCw/", thumbnail: require("../assets/DNyE0tkWtCw.png") },
+  { id: "9", title: "Moist Vanilla Cake with Fresh Strawberry-Cream Filling", url: "https://www.instagram.com/reel/DNs9rLPWjsL/", thumbnail: require("../assets/DNs9rLPWjsL.png") },
+  { id: "10", title: "Rich Chocolate Cake with Silky Milk Chocolate Mousse and Chocolate Buttercream", url: "https://www.instagram.com/reel/DNnweUhxePV/", thumbnail: require("../assets/DNnweUhxePV.png") },
 ];
 
 const cakeSections = {

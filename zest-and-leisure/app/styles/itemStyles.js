@@ -16,44 +16,31 @@ export default StyleSheet.create({
         marginBottom: measurements.marginBottom,
         color: "#d6336c",
     },
-    scrollView: {
-        padding: 10,
-    },
     grid: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
     },
-    postContainer: {
-        margin: 5,
-        borderRadius: measurements.borderRadius,
-        overflow: 'hidden',
+    gridTitle: {
+        fontSize: 22,
+        fontWeight: "700",
+        marginBottom: measurements.marginBottom,
+        color: "#000",
+        },
+
+    item: {
+        alignItems: "center",
+        marginBottom: measurements.marginBottom,
+        marginRight: 10,
     },
-    blockquoteStyle: {
-        width: '100%',
-        margin: 0,
-    },
-    webView: {
-        flex: 1,
-    },
-    touchable: {
-        flex: 1,
+    caption: {
+        marginTop: 6,
+        fontSize: 14,
+        color: "#000",
+        textAlign: "center",
     },
     thumbnail: {
-        width: '100%',
-        height: '100%',
-    },
-    playButton: {
-        position: 'absolute',
-        top: '40%',
-        left: '40%',
-        backgroundColor: 'rgba(0,0,0,0.6)',
         borderRadius: measurements.borderRadius,
-        padding: 15,
-    },
-    playIcon: {
-        fontSize: 28,
-        color: '#fff',
     },
     textContainer: {
         padding: 16,
