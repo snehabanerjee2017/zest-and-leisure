@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import measurements from '../config/measurements';
+
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -35,7 +37,7 @@ export default StyleSheet.create({
         backgroundColor: "#C3B1E1",
         paddingVertical: 10,
         paddingHorizontal: 15,
-        borderRadius: 8,
+        borderRadius: measurements.borderRadius,
         margin: 5,
     },
     buttonText: {
@@ -47,31 +49,40 @@ export default StyleSheet.create({
         padding: 15,
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 10, 
+        borderRadius: measurements.borderRadius, 
         marginBottom:10,
     },
 
     aboutImage: {
-        marginBottom: 15,
+        marginBottom: 10,
         width: 250,
         height: 250,
-        borderRadius: 10,
+        borderRadius: measurements.borderRadius,
     },
     mobileImage: {
-        resizeMode: 'contain',
+        resizeMode: 'cover',
     },
     desktopImage: {
         marginRight: 20,
+        marginLeft: 20,
     },
     aboutText: {
         flex: 1,
         fontSize: 16,
         lineHeight: 24,
         color: "#333",
-        textAlign: "left",
+        textAlign: "justify",
     },
     bottomSection: {
-        backgroundColor: "tomato",
-        height: 150,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 20,
+        borderRadius: measurements.borderRadius,
+        marginBottom:10,
+    },
+    textContainer: {
+        flex: 1,
+        justifyContent: 'center',
     },
 });

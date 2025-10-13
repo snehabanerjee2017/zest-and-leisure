@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import measurements from '../config/measurements';
+
 export default StyleSheet.create({
     container: {
         flexGrow: 1,
@@ -24,7 +26,7 @@ export default StyleSheet.create({
     },
     postContainer: {
         margin: 5,
-        borderRadius: 10,
+        borderRadius: measurements.borderRadius,
         overflow: 'hidden',
     },
     blockquoteStyle: {
@@ -46,7 +48,7 @@ export default StyleSheet.create({
         top: '40%',
         left: '40%',
         backgroundColor: 'rgba(0,0,0,0.6)',
-        borderRadius: 50,
+        borderRadius: measurements.borderRadius,
         padding: 15,
     },
     playIcon: {
@@ -56,7 +58,7 @@ export default StyleSheet.create({
     textContainer: {
         padding: 16,
         backgroundColor: "#fff0f6",
-        borderRadius: 8,
+        borderRadius: measurements.borderRadius,
         marginVertical: 10,
     },
     sectionContainer: {
@@ -71,7 +73,7 @@ export default StyleSheet.create({
         backgroundColor: "#fff",
         padding: 12,
         margin: 4,
-        borderRadius: 12,
+        borderRadius: measurements.borderRadius,
         elevation: 2,
     },
     cardTitle: {
@@ -88,7 +90,7 @@ export default StyleSheet.create({
     table: {
         backgroundColor: "#fff",
         padding: 12,
-        borderRadius: 12,
+        borderRadius: measurements.borderRadius,
         elevation: 1,
         marginBottom: 20,
     },
